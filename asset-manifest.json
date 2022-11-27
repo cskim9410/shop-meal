@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/cskim9410/shop-meal/static/css/main.56e997fa.css",
+    "main.js": "/cskim9410/shop-meal/static/js/main.aee030c3.js",
+    "static/media/meals.jpg": "/cskim9410/shop-meal/static/media/meals.2971f633fc1382581cbf.jpg",
+    "index.html": "/cskim9410/shop-meal/index.html",
+    "main.56e997fa.css.map": "/cskim9410/shop-meal/static/css/main.56e997fa.css.map",
+    "main.aee030c3.js.map": "/cskim9410/shop-meal/static/js/main.aee030c3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.56e997fa.css",
+    "static/js/main.aee030c3.js"
+  ]
+}
