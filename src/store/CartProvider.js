@@ -7,9 +7,21 @@ const defaultCartState = {
 };
 
 const cartReducer = (state, action) => {
-  if (action.type === "ADD") {
+  switch (action.type) {
+    case "ADD": {
+      if (state.items.find((item) => item.id === action.payload.id)) {
+        return state;
+      }
+      return {
+        ...state,
+        items: [...state.items, action.payload],
+        totalAmount:
+          state.totalAmount + action.payload.price * action.payload.amount,
+      };
+    }
+    default:
+      return state;
   }
-  return defaultCartState;
 };
 
 const CartProvider = (props) => {
@@ -18,10 +30,10 @@ const CartProvider = (props) => {
     defaultCartState
   );
   const addItemToCartHandler = (item) => {
-    dispatchCartAction({ type: "ADD", item: item });
+    dispatchCartAction({ type: "ADD", payload: item });
   };
   const removeItemFromCartHandler = (id) => {
-    dispatchCartAction({ type: "REMOVE", id: id });
+    dispatchCartAction({ type: "REMOVE", payload: id });
   };
 
   const cartContext = {
